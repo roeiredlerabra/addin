@@ -10,11 +10,57 @@
 <body>
     <p>This add-in will insert the text 'Hello world!' in a new message.</p>
     <button id="helloButton">Say hello</button>
-<ul>
-    <li><a href="#" style="display:inline-block; padding:10px 20px; background-color:#4CAF50; color:#fff; text-decoration:none;">Button 1</a></li>
-    <li><a href="#" style="display:inline-block; padding:10px 20px; background-color:#008CBA; color:#fff; text-decoration:none;">Button 2</a></li>
-    <li><a href="#" style="display:inline-block; padding:10px 20px; background-color:#f44336; color:#fff; text-decoration:none;">Button 3</a></li>
-</ul>
+    <style>
+        .button-list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-align: center;
+        }
+        
+        .button-list li {
+          margin-bottom: 20px;
+        }
+        
+        a.button {
+          display: inline-block;
+          padding: 20px 40px;
+          font-size: 24px;
+          background-color: #4CAF50;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 10px;
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        a.button-2 {
+          background-color: #008CBA;
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+        
+        a.button-3 {
+          background-color: #f44336;
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+        
+        a.button:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+          color: #000;
+        }
+      </style>
+      
+      <ul class="button-list">
+        <li><a href="#" class="button">Button 1</a></li>
+        <li><a href="#" class="button button-2">Button 2</a></li>
+        <li><a href="#" class="button button-3">Button 3</a></li>
+      </ul>
     <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
     <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
 </body>
