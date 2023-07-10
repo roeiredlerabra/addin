@@ -5,8 +5,68 @@
 <head>
     <!-- Office JavaScript API -->
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-</head>
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Outlook Add-In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+      .button-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+      }
+      
+      .button-list li {
+        margin-bottom: 20px;
+      }
+      
+      a.button {
+        display: inline-block;
+        padding: 20px 40px;
+        font-size: 24px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      a.button-2 {
+        background-color: #008CBA;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      }
+      
+      a.button-3 {
+        background-color: #f44336;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      }
+      
+      a.button:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+        color: #000;
+      }
+      
+      .blog-post {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+      }
+    </style>
+  </head>
 <body>
     <p>This add-in will insert the text 'Hello world!' in a new message.</p>
     <button id="helloButton">Say hello</button>
@@ -78,6 +138,12 @@
       </div>
     <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
     <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.3/dist/tippy-bundle.iife.min.js"></script>
 </body>
 
 <script>
