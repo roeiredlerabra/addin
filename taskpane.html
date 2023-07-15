@@ -1,147 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-    <!-- Office JavaScript API -->
-    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Outlook Add-In</title>
-    
-    <style>
-      body {
-        width: 400px;
-        margin: 0 auto;
-        font-size: 16px;
-        line-height: 1.5;
-      }
-      
-      p {
-        margin: 0 0 10px;
-      }
-      
-      button {
-        display: block;
-        margin: 10px auto;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: #fff;
-        text-decoration: none;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-      
-      button:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
-        color: #000;
-      }
-      
-      .button-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-align: center;
-      }
-      
-      .button-list li {
-        margin-bottom: 10px;
-      }
-      
-      a.button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 10px;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-      
-      a.button-2 {
-        background-color: #008CBA;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-      }
-      
-      a.button-3 {
-        background-color: #f44336;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-      }
-      
-      a.button:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
-        color: #000;
-      }
-      
-      iframe {
-        width: 100%;
-        height: 300px;
-        border: none;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <title>CodePen -  Hover Image Effect</title>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <p>This add-in will insert the text 'Hello world!' in a new message.</p>
-    <button id="helloButton">Say hello</button>
-      
-    <ul class="button-list">
-        <li><a href="https://abrait.sharepoint.com/teams/msteams_38b87d/Shared%20Documents/Forms/AllItems.aspx?xsdata=MDV8MDF8fDI2ZWQ4OWRkZmRmMDQwNjVkMjAyMDhkYjgyZWJiNDcyfDQwMTlmYzFjNTliZTQwMmM5N2ZlNjNjYTlhMWExZDlhfDB8MHw2MzgyNDc3MjEwNTk0MDYzMzh8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMM1JsWVcxekx6RTVPbEV0ZVY5MWNtMUNVeTA1WkRoM2NIQlVUbTk1Wm5vM2NEQnRVMkpGVEV4Q2NrVjJSall4YVRGeFNHc3hRSFJvY21WaFpDNTBZV04yTWk5amFHRnVibVZzY3k4eE9UcFJMWGxmZFhKdFFsTXRPV1E0ZDNCd1ZFNXZlV1o2TjNBd2JWTmlSVXhNUW5KRmRrWTJNV2t4Y1Vock1VQjBhSEpsWVdRdWRHRmpkakl2YldWemMyRm5aWE12TVRZNE9URTNOVE13TlRNNE5BPT18MjAxNmY1OTI4MDRiNDliOGQyMDIwOGRiODJlYmI0NzJ8MjQzZWY4MjcyMjMwNGMxMzlkYjI2MjdmOGY2Zjk0NzU%3D&sdata=Vzhmb1YzN1ZmaCtabm4yT3NLMGlXdDhRNHk3Z2xmdWltU0k1bHVoZ2N2VT0%3D&ovuser=4019fc1c%2D59be%2D402c%2D97fe%2D63ca9a1a1d9a%2CRoei%2ERedler%40abra%2Dit%2Ecom&OR=Teams%2DHL&CT=1689202927178&RootFolder=%2Fteams%2Fmsteams%5F38b87d%2FShared%20Documents%2Fmbinshtock%40abra%2Dit%2Ecom&FolderCTID=0x012000EB92EDC5446055479B94666C3A8FF823" class="button">Button 1</a></li>
-        <li><a href="#" class="button button-2">Button 2</a></li>
-        <li><a href="#" class="button button-3">Button 3</a></li>
-    </ul>
-      
-    <div>
-        <iframe src="https://www.example.com" title="Example Website"></iframe>
+<!-- partial:index.partial.html -->
+<main id="main">
+  <h1 data-splitting=""></h1>
+  <div class="card" tabindex="0"><img src="https://images.unsplash.com/photo-1674510891276-bd1fc1a13889?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="A City skyline at sunset" />
+    <div class="text">
+      <h2 data-splitting="">Japan</h2>
+      <p data-splitting="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos excepturi
+        nostrum necessitatibus doloremque? Quasi non molestias odio. Quasi non molestias odio.</p>
     </div>
-
-    <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
-    <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
-
-    <script>
-        /**
-         * Writes 'Hello world!' to a new message body.
-         */
-        function sayHello() {
-            Office.context.mailbox.item.body.setAsync(
-                "Hello world!",
-                {
-                    coercionType: "html", // Write text as HTML
-                },
-
-                // Callback method to check that setAsync succeeded
-                function (asyncResult) {
-                    if (asyncResult.status ==
-                        Office.AsyncResultStatus.Failed) {
-                        consolet.log("Action failed with error: " + asyncResult.error.message);
-                    } else {
-                        console.log("Message sent!");
-                    }
-                }
-            );
-        }
-
-        Office.onReady((info) => {
-            if (info.host === Office.HostType.Outlook) {
-                document.getElementById("helloButton").onclick = sayHello;
-            }
-        });
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@6.3.3/dist/tippy-bundle.iife.min.js"></script>
+  </div>
+  <div class="card" tabindex="0"><img src="https://images.unsplash.com/photo-1598751337485-0d57b0c50b83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=682&q=80" alt="A City skyline at sunset" />
+    <div class="text">
+      <h2 data-splitting="">Ontario</h2>
+      <p data-splitting=""> Quasi non molestias odio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dignissimos excepturi nostrum necessitatibus doloremque? Quasi non molestias odio.</p>
+    </div>
+  </div>
+  <div class="card" tabindex="0"><img src="https://images.unsplash.com/photo-1612873649383-edf91f1cf7fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="A City skyline at sunset" />
+    <div class="text">
+      <h2 data-splitting="">New York</h2>
+      <p data-splitting=""> Quasi non molestias odio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dignissimos excepturi nostrum necessitatibus doloremque? Quasi non molestias odio.</p>
+    </div>
+  </div>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+<script src='https://unpkg.com/splitting/dist/splitting.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
