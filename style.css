@@ -21,7 +21,7 @@ html {
   background: rgb(51, 142, 139);
   background: radial-gradient(
     circle,
-    rgba(51, 142, 139, 1) 0%,
+    rgb(68 51 142) 0%,
     rgba(19, 20, 19, 1) 100%
   );
   padding: 0;
