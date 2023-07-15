@@ -1,21 +1,49 @@
-<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
 <!DOCTYPE html>
 <html>
 <head>
     <!-- Office JavaScript API -->
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Outlook Add-In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Outlook Add-In</title>
     
     <style>
+      body {
+        width: 400px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      
+      p {
+        margin: 0 0 10px;
+      }
+      
+      button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      button:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+        color: #000;
+      }
+      
       .button-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -23,13 +51,13 @@
       }
       
       .button-list li {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       
       a.button {
         display: inline-block;
-        padding: 20px 40px;
-        font-size: 24px;
+        padding: 10px 20px;
+        font-size: 16px;
         background-color: #4CAF50;
         color: #fff;
         text-decoration: none;
@@ -56,7 +84,7 @@
       
       iframe {
         width: 100%;
-        height: 600px;
+        height: 300px;
         border: none;
       }
     </style>
@@ -66,13 +94,13 @@
     <button id="helloButton">Say hello</button>
       
     <ul class="button-list">
-        <li><a href="#" class="button">Button 1</a></li>
+        <li><a href="https://abrait.sharepoint.com/teams/msteams_38b87d/Shared%20Documents/Forms/AllItems.aspx?xsdata=MDV8MDF8fDI2ZWQ4OWRkZmRmMDQwNjVkMjAyMDhkYjgyZWJiNDcyfDQwMTlmYzFjNTliZTQwMmM5N2ZlNjNjYTlhMWExZDlhfDB8MHw2MzgyNDc3MjEwNTk0MDYzMzh8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMM1JsWVcxekx6RTVPbEV0ZVY5MWNtMUNVeTA1WkRoM2NIQlVUbTk1Wm5vM2NEQnRVMkpGVEV4Q2NrVjJSall4YVRGeFNHc3hRSFJvY21WaFpDNTBZV04yTWk5amFHRnVibVZzY3k4eE9UcFJMWGxmZFhKdFFsTXRPV1E0ZDNCd1ZFNXZlV1o2TjNBd2JWTmlSVXhNUW5KRmRrWTJNV2t4Y1Vock1VQjBhSEpsWVdRdWRHRmpkakl2YldWemMyRm5aWE12TVRZNE9URTNOVE13TlRNNE5BPT18MjAxNmY1OTI4MDRiNDliOGQyMDIwOGRiODJlYmI0NzJ8MjQzZWY4MjcyMjMwNGMxMzlkYjI2MjdmOGY2Zjk0NzU%3D&sdata=Vzhmb1YzN1ZmaCtabm4yT3NLMGlXdDhRNHk3Z2xmdWltU0k1bHVoZ2N2VT0%3D&ovuser=4019fc1c%2D59be%2D402c%2D97fe%2D63ca9a1a1d9a%2CRoei%2ERedler%40abra%2Dit%2Ecom&OR=Teams%2DHL&CT=1689202927178&RootFolder=%2Fteams%2Fmsteams%5F38b87d%2FShared%20Documents%2Fmbinshtock%40abra%2Dit%2Ecom&FolderCTID=0x012000EB92EDC5446055479B94666C3A8FF823" class="button">Button 1</a></li>
         <li><a href="#" class="button button-2">Button 2</a></li>
         <li><a href="#" class="button button-3">Button 3</a></li>
     </ul>
       
     <div>
-        <iframe src="https://cloudblogs.microsoft.com/dynamics365/it/2023/06/02/personalize-your-timeline-layout-and-boost-your-productivity/" title="Example Website"></iframe>
+        <iframe src="https://www.example.com" title="Example Website"></iframe>
     </div>
 
     <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
@@ -93,7 +121,7 @@
                 function (asyncResult) {
                     if (asyncResult.status ==
                         Office.AsyncResultStatus.Failed) {
-                        console.log("Action failed with error: " + asyncResult.error.message);
+                        consolet.log("Action failed with error: " + asyncResult.error.message);
                     } else {
                         console.log("Message sent!");
                     }
